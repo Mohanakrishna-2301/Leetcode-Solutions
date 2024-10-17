@@ -26,9 +26,9 @@ int* arrayRankTransform(int* arr, int n, int* returnSize)
 	qsort(indexed, n, sizeof(IndexedValue), compare);
 
 	int *res = malloc(sizeof(int) * n);
-    int sameRanks = 0;
+    	int sameRanks = 0;
 	for (int i = 0; i < n; ++i) 
-    {
+    	{
 		IndexedValue a = indexed[i];
 		res[a.ind] = i + 1 - sameRanks;
         if (i < n - 1 && indexed[i].val == indexed[i + 1].val)
@@ -39,7 +39,8 @@ int* arrayRankTransform(int* arr, int n, int* returnSize)
 	return res;
 }
 
-int main() {
+int main() 
+{
     int arr[] = {40, 10, 20, 30};
     int arrSize = sizeof(arr) / sizeof(arr[0]);
     int returnSize;
