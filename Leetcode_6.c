@@ -20,7 +20,7 @@ char zigzag(char *s,int numRows)
                         if(j % 2 != 0)
                         {
                             a[j][i] = s[x + 1];
-                            x++;
+                            x += 1;
                         }else
                         {
                             a[j][i] = s[x - 1];
